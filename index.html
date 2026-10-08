@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GVFDCZDWC8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-GVFDCZDWC8');
-</script>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GVFDCZDWC8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GVFDCZDWC8');
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,13 +20,9 @@
 </head>
 
 <body>
-
     <!-- INTRODUÇÃO -->
-
     <section id="intro">
-
         <div class="intro-container">
-
             <div class="eyebrow">
                 ELEIÇÕES 2026
             </div>
@@ -47,7 +38,6 @@
             </p>
 
             <div class="info-box">
-
                 <strong>Como funciona?</strong>
 
                 <p>
@@ -61,49 +51,28 @@
                     "Não tenho opinião". Nesse caso, a resposta não
                     altera a porcentagem de compatibilidade.
                 </p>
-
             </div>
 
-            <button
-                id="start-btn"
-                class="primary-btn"
-            >
+            <button id="start-btn" class="primary-btn">
                 Começar o quiz
             </button>
-
         </div>
-
     </section>
 
-
     <!-- QUIZ -->
-
-    <section
-        id="quiz"
-        class="hidden"
-    >
-
+    <section id="quiz" class="hidden">
         <div class="container">
-
             <div class="quiz-header">
-
                 <div id="question-number">
                     Pergunta 1 de 11
                 </div>
 
                 <div class="progress-container">
-
-                    <div
-                        id="progress-bar"
-                    ></div>
-
+                    <div id="progress-bar"></div>
                 </div>
-
             </div>
 
-
             <div class="question-card">
-
                 <h2 id="question-title">
                     Pergunta
                 </h2>
@@ -113,46 +82,24 @@
                 </p>
 
                 <div id="answers"></div>
-
             </div>
 
-
             <div class="quiz-navigation">
-
-                <button
-                    id="back-btn"
-                    type="button"
-                    disabled
-                >
+                <button id="back-btn" type="button" disabled>
                     Voltar
                 </button>
 
-                <button
-                    id="next-btn"
-                    type="button"
-                    disabled
-                >
+                <button id="next-btn" type="button" disabled>
                     Próxima
                 </button>
-
             </div>
-
         </div>
-
     </section>
 
-
     <!-- RESULTADO -->
-
-    <section
-        id="result"
-        class="hidden"
-    >
-
+    <section id="result" class="hidden">
         <div class="container">
-
             <div class="result-header">
-
                 <div class="eyebrow">
                     RESULTADO
                 </div>
@@ -165,16 +112,11 @@
                     Veja como suas respostas se distribuíram entre
                     os dois candidatos.
                 </p>
-
             </div>
 
-
             <div class="candidates">
-
                 <!-- LULA -->
-
                 <div class="candidate-card lula-card">
-
                     <div class="candidate-name lula-name">
                         Lula
                     </div>
@@ -191,28 +133,19 @@
                     </div>
 
                     <div class="compatibility-bar">
-
                         <div
                             id="lula-bar"
                             class="lula-bar"
                         ></div>
-
                     </div>
 
-                    <div
-                        id="lula-score"
-                        class="candidate-score"
-                    >
+                    <div id="lula-score" class="candidate-score">
                         0 pontos
                     </div>
-
                 </div>
 
-
                 <!-- FLÁVIO -->
-
                 <div class="candidate-card flavio-card">
-
                     <div class="candidate-name flavio-name">
                         Flávio Bolsonaro
                     </div>
@@ -229,52 +162,76 @@
                     </div>
 
                     <div class="compatibility-bar">
-
                         <div
                             id="flavio-bar"
                             class="flavio-bar"
                         ></div>
-
                     </div>
 
-                    <div
-                        id="flavio-score"
-                        class="candidate-score"
-                    >
+                    <div id="flavio-score" class="candidate-score">
                         0 pontos
                     </div>
-
                 </div>
-
             </div>
 
+            <!-- COMPARTILHAMENTO -->
+            <div class="share-section">
+                <h3>Compartilhe seu resultado</h3>
+
+                <p>
+                    Descubra como suas respostas se comparam
+                    às dos seus amigos.
+                </p>
+
+                <div class="share-buttons">
+                    <button
+                        id="share-whatsapp"
+                        class="share-btn whatsapp-btn"
+                        type="button"
+                    >
+                        Compartilhar no WhatsApp
+                    </button>
+
+                    <button
+                        id="share-native"
+                        class="share-btn native-share-btn"
+                        type="button"
+                    >
+                        Compartilhar resultado
+                    </button>
+
+                    <button
+                        id="copy-result"
+                        class="share-btn copy-btn"
+                        type="button"
+                    >
+                        Copiar resultado
+                    </button>
+                </div>
+
+                <p
+                    id="share-feedback"
+                    class="share-feedback"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+            </div>
 
             <!-- REVISÃO -->
-
             <div class="details">
-
                 <h3>
                     Suas respostas
                 </h3>
 
                 <div id="answer-review"></div>
-
             </div>
 
-
-            <button
-                id="restart-btn"
-                type="button"
-            >
+            <button id="restart-btn" type="button">
                 Refazer o quiz
             </button>
-
         </div>
-
     </section>
 
-
     <script src="script.js"></script>
-
 </body>
 </html>
