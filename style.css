@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -379,6 +380,76 @@ h1 {
 
 
 /* =========================
+   COMPARTILHAMENTO
+========================= */
+
+.share-section {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.share-section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.share-section > p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.share-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.share-btn {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #111;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.share-btn:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+.whatsapp-btn {
+    background: #168a48;
+    border-color: #168a48;
+    color: #fff;
+}
+
+.native-share-btn {
+    background: #111;
+    color: #fff;
+}
+
+.copy-btn {
+    background: #fff;
+    color: #111;
+}
+
+.share-section .share-feedback {
+    margin: 15px 0 0;
+    font-size: 14px;
+    color: #444;
+}
+
+
+/* =========================
    DETALHES
 ========================= */
 
@@ -466,7 +537,6 @@ h1 {
 ========================= */
 
 @media (max-width: 700px) {
-
     .container {
         padding: 25px 15px;
     }
@@ -502,5 +572,17 @@ h1 {
     #back-btn,
     #next-btn {
         width: 100%;
+    }
+}
+
+
+@media (min-width: 600px) {
+    .share-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .share-btn {
+        flex: 1 1 180px;
     }
 }
