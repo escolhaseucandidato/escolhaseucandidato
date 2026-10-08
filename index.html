@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Eleição 2026 | Quiz de Compatibilidade</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- INTRODUÇÃO -->
+
+    <section id="intro">
+
+        <div class="intro-container">
+
+            <div class="eyebrow">
+                ELEIÇÕES 2026
+            </div>
+
+            <h1>
+                Com qual candidato<br>
+                você mais concorda?
+            </h1>
+
+            <p class="subtitle">
+                Responda às perguntas e descubra como suas respostas
+                se relacionam com as posições apresentadas no quiz.
+            </p>
+
+            <div class="info-box">
+
+                <strong>Como funciona?</strong>
+
+                <p>
+                    Você responderá perguntas sobre diferentes temas.
+                    Ao final, suas respostas serão comparadas com as
+                    posições consideradas pelo quiz.
+                </p>
+
+                <p>
+                    Algumas perguntas possuem a opção
+                    "Não tenho opinião". Nesse caso, a resposta não
+                    altera a porcentagem de compatibilidade.
+                </p>
+
+            </div>
+
+            <button
+                id="start-btn"
+                class="primary-btn"
+            >
+                Começar o quiz
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUIZ -->
+
+    <section
+        id="quiz"
+        class="hidden"
+    >
+
+        <div class="container">
+
+            <div class="quiz-header">
+
+                <div id="question-number">
+                    Pergunta 1 de 11
+                </div>
+
+                <div class="progress-container">
+
+                    <div
+                        id="progress-bar"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="question-card">
+
+                <h2 id="question-title">
+                    Pergunta
+                </h2>
+
+                <p id="question-explanation">
+                    Explicação
+                </p>
+
+                <div id="answers"></div>
+
+            </div>
+
+
+            <div class="quiz-navigation">
+
+                <button
+                    id="back-btn"
+                    type="button"
+                    disabled
+                >
+                    Voltar
+                </button>
+
+                <button
+                    id="next-btn"
+                    type="button"
+                    disabled
+                >
+                    Próxima
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESULTADO -->
+
+    <section
+        id="result"
+        class="hidden"
+    >
+
+        <div class="container">
+
+            <div class="result-header">
+
+                <div class="eyebrow">
+                    RESULTADO
+                </div>
+
+                <h2>
+                    Sua compatibilidade
+                </h2>
+
+                <p>
+                    Veja como suas respostas se distribuíram entre
+                    os dois candidatos.
+                </p>
+
+            </div>
+
+
+            <div class="candidates">
+
+                <!-- LULA -->
+
+                <div class="candidate-card lula-card">
+
+                    <div class="candidate-name lula-name">
+                        Lula
+                    </div>
+
+                    <div class="candidate-religion">
+                        Religião declarada: Católico
+                    </div>
+
+                    <div
+                        id="lula-percentage"
+                        class="candidate-percentage lula-color"
+                    >
+                        0%
+                    </div>
+
+                    <div class="compatibility-bar">
+
+                        <div
+                            id="lula-bar"
+                            class="lula-bar"
+                        ></div>
+
+                    </div>
+
+                    <div
+                        id="lula-score"
+                        class="candidate-score"
+                    >
+                        0 pontos
+                    </div>
+
+                </div>
+
+
+                <!-- FLÁVIO -->
+
+                <div class="candidate-card flavio-card">
+
+                    <div class="candidate-name flavio-name">
+                        Flávio Bolsonaro
+                    </div>
+
+                    <div class="candidate-religion">
+                        Religião declarada: Evangélico
+                    </div>
+
+                    <div
+                        id="flavio-percentage"
+                        class="candidate-percentage flavio-color"
+                    >
+                        0%
+                    </div>
+
+                    <div class="compatibility-bar">
+
+                        <div
+                            id="flavio-bar"
+                            class="flavio-bar"
+                        ></div>
+
+                    </div>
+
+                    <div
+                        id="flavio-score"
+                        class="candidate-score"
+                    >
+                        0 pontos
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- REVISÃO -->
+
+            <div class="details">
+
+                <h3>
+                    Suas respostas
+                </h3>
+
+                <div id="answer-review"></div>
+
+            </div>
+
+
+            <button
+                id="restart-btn"
+                type="button"
+            >
+                Refazer o quiz
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
